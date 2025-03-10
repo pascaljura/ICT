@@ -11,6 +11,7 @@ $files = array_diff(scandir(__DIR__), array('..', '.'));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seznam souborů</title>
 </head>
+
 <body>
     <h1>Seznam souborů ve složce</h1>
     <ul>
