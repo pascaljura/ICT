@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MŮJ FORMULÁŘ</title>
+    <style>
+      /* Základní nastavení stránky */
+      body {
+        font-family: Arial, sans-serif;
+        background: #2c2f33;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Nadpis nad formulářem */
+      .form-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #7289da;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      /* Kontejner pro formulář */
+      .form-container {
+        background: #23272a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 320px;
+      }
+
+      /* Nadpis formuláře */
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      /* Obecné nastavení pro vstupní pole */
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        color: white;
+      }
+
+      input[type="text"],
+      input[type="submit"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="file"]   {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      /* Skupiny pro radio a checkbox */
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 5px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+
+      /* Vzhled tlačítka */
+      input[type="submit"] {
+        background: #7289da;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 15px;
+        border: none;
+      }
+
+      input[type="submit"]:hover {
+        background: #1e44ce;
+      }
+
+      /* Styl pro radio a checkbox, aby byly na stejné řádce jako text */
+      .radio-group label,
+      .checkbox-group label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      input[type="file"] {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #f8f8f8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Nadpis nad formulářem -->
+    <div class="form-title">MŮJ FORMULÁŘ</div>
+
+    <!-- Kontejner pro formulář -->
+    <div class="form-container">
+      <form action="action.php">
+        <!-- Jméno a příjmení -->
+        <label for="fname" style="color: #7289da">Jméno:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="John"
+          required
+        />
+
+        <label for="lname" style="color: #7289da">Příjmení:</label>
+        <input type="text" id="lname" name="lname" placeholder="Doe" required />
+        <label for="email" style="color: #7289da">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="john.doe@example.com"
+          required
+        />
+        <label for="tel" style="color: #7289da">Telefonní číslo:</label>
+        <input
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="+420 123 456 789"
+          required
+        />
+        <!-- Výběr oblíbeného jazyka -->
+        <label style="color: #7289da">Oblíbený jazyk:</label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" id="html" name="fav_language" value="HTML" />
+            HTML</label
+          >
+          <label
+            ><input type="radio" id="css" name="fav_language" value="CSS" />
+            CSS</label
+          >
+          <label
+            ><input
+              type="radio"
+              id="javascript"
+              name="fav_language"
+              value="JavaScript"
+            />
+            JavaScript</label
+          >
+        </div>
+
+        <!-- Výběr vozidel -->
+        <label style="color: #7289da">Moje vozidla:</label>
+        <div class="checkbox-group">
+          <label
+            ><input
+              type="checkbox"
+              id="vehicle1"
+              name="vehicle1"
+              value="Bike"
+            />
+            Mám kolo</label
+          >
+          <label
+            ><input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+            Mám auto</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="vehicle3"
+              name="vehicle3"
+              value="Boat"
+            />
+            Mám loď</label
+          >
+        </div>
+        <label style="color: #7289da">Životopis:</label>
+        <input type="file" required />
+        <!-- Tlačítko odeslání -->
+        <input type="submit" value="Odeslat" />
+      </form>
+    </div>
+  </body>
+</html>

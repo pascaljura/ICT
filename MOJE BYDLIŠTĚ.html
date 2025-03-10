@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOJE BYDLIŠTĚ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("./img/logo_blansko.png") no-repeat center center fixed;
+        background-size: cover;
+        background-blend-mode: lighten;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .header {
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: darkblue;
+        padding: 20px;
+        background-color: #7289da;
+        color: white;
+      }
+      .main {
+        display: flex;
+        padding: 20px;
+      }
+      .left-menu,
+      .right-form {
+        width: 25%;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .left-menu ul {
+        list-style-type: square;
+        padding: 0;
+      }
+      .left-menu li {
+        margin: 10px 0;
+      }
+      .left-menu a {
+        text-decoration: none;
+        color: #7289da;
+      }
+      .content {
+        width: 50%;
+        text-align: center;
+      }
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        border: 3px solid #7289da;
+        border-radius: 5px;
+      }
+      .content p {
+        text-align: justify;
+        margin-top: 15px;
+      }
+      .contact-form h3 {
+        text-align: center;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+      }
+      .contact-form input[type="submit"] {
+        background-color: #7289da;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .contact-form input[type="submit"]:hover {
+        background-color: #9fb4ff;
+      }
+      .footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #7289da;
+        color: white;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Blansko</div>
+      <div class="main">
+        <div class="left-menu">
+          <ul>
+            <li>
+              <a href="https://www.hrad.cz" target="_blank"
+                >Stránky prezidenta</a
+              >
+            </li>
+            <li>
+              <a href="https://www.praha.eu" target="_blank"
+                >Stránky hlavního města</a
+              >
+            </li>
+            <li>
+              <a href="https://www.blansko.cz/" target="_blank"
+                >Stránky mého města</a
+              >
+            </li>
+            <li>
+              <a href="https://www.kr-jihomoravsky.cz" target="_blank"
+                >Stránky Jihomoravského kraje</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Town_hall_in_Blansko2.JPG/375px-Town_hall_in_Blansko2.JPG"
+            alt="RADNICE MĚSTA"
+          />
+          <p>
+            Četné archeologické nálezy svědčí o tom, že oblast Blanenska byla
+            osídlena prakticky již od pravěku. Blansko samotné vzniklo původně
+            jako osada v místech dnešního Starého Blanska na pravém břehu
+            Svitavy, podél níž procházela významná obchodní stezka z Podunají do
+            Čech.
+          </p>
+
+          <p>
+            První písemná zmínka o něm je zachycena již v Letopise kanovníka
+            Vyšehradského, pokračovatele Kosmova a vztahuje se k zajímavé
+            události roku 1136, kdy mezi olomouckým biskupem Jindřichem Zdíkem a
+            brněnským údělným knížetem Vratislavem probíhal ostrý majetkový a
+            politický spor o právo vystavět v Blansku nový kostel.
+          </p>
+
+          <p>
+            Spor po čase ukončilo až rozhodnutí pražského knížete Soběslava,
+            který dal za pravdu biskupovi, a tak mohl Jindřich Zdík nový kostel
+            v Blansku, které se záhy stalo významnou součástí olomouckých
+            biskupských statků, dostavět a vysvětit.
+          </p>
+
+          <p>
+            Od konce 14. století se objevují zprávy o tzv. manském dvoře na
+            levém břehu Svitavy. Kolem tohoto dvora, stojícího zhruba v místech
+            dnešního zámku, postupně vyrůstala osada Nové Blansko. Obě části se
+            správně a ekonomicky vyvíjely samostatně až do roku 1526.
+          </p>
+
+          <p>
+            V poslední třetině 16. století se dostalo Blansko do držení rodu
+            Žalkovských ze Žalkovic. Matyáš Žalkovský je povýšil na městys a
+            jeho syn Jan nechal na přelomu 16. a 17. století přestavět původní
+            gotickou tvrz na renesanční zámek. Od konce 17. století vlastnil
+            blanenské panství slezský rod hrabat Gellhornů, který zde také
+            založil železářskou výrobu. V této tradici pokračoval rod
+            Salm-Reifferscheidt, který získal blanenské panství koupí roku 1766.
+            První polovina 19. století byla obdobím rozkvětu blanenského
+            železářství a rozmachu výroby umělecké litiny. Salmům, kteří později
+            prodali železárny pražské firmě Breitfeld-Daněk, patřilo blanenské
+            panství do roku 1945.
+          </p>
+
+          <p>
+            Zásadní význam pro rozvoj Blanska měla výstavba železniční trati
+            Brno – Česká Třebová – Praha, kterou v členitém terénu mezi Brnem a
+            Blanskem stavěla v letech 1843–1849 italská firma Tallachini.
+            Obdivuhodnými tunely, postavenými tehdy italskými „Baraby“ tu jezdí
+            vlaky dodnes. Po zrušení patrimoniální správy koncem 40. let 19.
+            století se Blansko stalo centrem soudního okresu a zároveň místem s
+            rychle se probouzejícím národním a kulturním životem. Důkazem je
+            např. vznik čtenářsko-pěveckého spolku Rastislav v roce 1862. Jeho
+            přímý následovník – stejnojmenný pěvecký sbor – v Blansku působí
+            dosud.
+          </p>
+
+          <p>
+            Přelomovým datem v dějinách Blanska pak bylo jeho povýšení na město
+            v roce 1905 dekretem císaře Františka Josefa I. Už před 1. světovou
+            válkou se Blansko a jeho bezprostřední okolí navíc staly zásluhou
+            objevitelského díla Dr. Jindřicha Wankela a profesora Karla Absolona
+            velmi vyhledávaným turistickým cílem. Tento trend ještě zesílil s
+            pokračujícími výzkumy a dalším zpřístupňováním jeskyní Moravského
+            krasu po vzniku Československé republiky.
+          </p>
+
+          <p>
+            Druhá světová válka sice rozvoj města násilně přerušila, již brzy po
+            jejím skončení se ale Blansko z následků okupace vzpamatovalo a v
+            roce 1949 se stalo okresním městem. Zůstalo jím i po reformě
+            územního členění státu v roce 1960. Doba 60.–80. let 20. století je
+            vůbec obdobím rychlého, někdy až příliš překotného, růstu města.
+            Blansko se v té době stává doslova synonymem centra strojírenského
+            průmyslu se vším pozitivním i negativním, co k tomuto pojmu patří.
+          </p>
+
+          <p>
+            Kromě nových provozů hlavních průmyslových podniků (ČKD, ADAST a
+            Metra), které své výrobky vyváží do mnoha zemí světa, ve městě v té
+            době vyrůstají i nová sídliště, základní a střední školy, a četné
+            stavby občanské vybavenosti. Důsledkem tohoto vývoje je nejen prudký
+            nárůst počtu obyvatel Blanska (šestinásobný za pouhých 70 let), ale
+            i nevyhnutelný a bohužel i nenávratný zánik většiny z původní
+            historické zástavby, která sice již přestala vyhovovat potřebám
+            rozvíjejícího se města, na rozdíl od řady moderních staveb mu však
+            dodávala osobitý Genius loci...
+          </p>
+
+          <p>
+            Rok 1989 přinesl do Blanska nejen zásadní společenské změny, ale
+            také rozpad velkých podniků a dočasný útlum zdejší průmyslové
+            výroby. Mladému, a přitom nyní i největšímu městu regionu, se však
+            přes všechna úskalí podařilo většinu následků těchto negativních
+            jevů překonat. Centrem okresu zůstalo Blansko až do nedávné reformy
+            veřejné správy, kdy se roku 2003 stalo obcí s rozšířenou působností,
+            jejíž správní obvod zahrnuje dalších 42 obcí a měst s více než
+            50.000 obyvateli.
+          </p>
+
+          <p>
+            Do druhé dekády nového tisíciletí vstupuje dvacetitisícové Blansko
+            jako město, které si klade za cíl, aby se v něm jeho obyvatelům
+            dobře žilo a pro domácí i zahraniční návštěvníky představovalo
+            skutečnou bránu Moravského krasu. Jedni i druzí zde naleznou řadu
+            veřejných institucí, rozvinutou infrastrukturu služeb a vzdělávání a
+            také vhodné zázemí pro své kulturní a sportovní vyžití.
+          </p>
+          <a href="mailto:crha@blansko.cz">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/2022-12-10_Grand_opening_of_the_railway_line_Brno%E2%80%93Blansko_after_reconstruction_11_%28Ji%C5%99%C3%AD_Crha%29.jpg/800px-2022-12-10_Grand_opening_of_the_railway_line_Brno%E2%80%93Blansko_after_reconstruction_11_%28Ji%C5%99%C3%AD_Crha%29.jpg"
+              alt="JIŘÍ CRHA"
+              title="JIŘÍ CRHA"
+              style="
+                width: 75%;
+                height: auto;
+                margin-top: 10px;
+                border-radius: 5px;
+              "
+            />
+          </a>
+        </div>
+        <div class="right-form contact-form">
+          <h3 style="margin-top: unset">Napište starostovi</h3>
+          <form>
+            Jméno:<br /><input type="text" /><br />
+            Příjmení:<br /><input type="text" /><br />
+            Email:<br /><input type="email" /><br />
+            Zpráva:<br /><textarea cols="30" rows="10"></textarea><br />
+            <input type="submit" value="Odeslat" />
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        Vytvořil:
+        <a href="mailto:boucnik.jiri@purkynka.cz">Jiří Boucník</a>
+      </div>
+    </div>
+  </body>
+</html>
