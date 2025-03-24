@@ -5,42 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FONTY</title>
     <style>
-      .patkove {
-        font-family: "Times New Roman", serif;
-        font-weight: unset;
+      body {
+        background-color: blue;
+        background-image: url("https://www.purkynka.cz/wp-content/uploads/2022/04/Purkynka-HOR_barva.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background 0.5s ease;
       }
-      .podtrzene {
-        text-decoration: underline;
-        font-weight: unset;
-      }
-      .male-kapitalky {
-        font-variant: small-caps;
-        font-weight: unset;
-      }
-      .tucne {
-        font-weight: bold;
-      }
-      .velikost40 {
-        font-size: 40px;
-        font-weight: unset;
-      }
-      .zarovnani-doprava {
-        text-align: right;
-        font-weight: unset;
-      }
-      .zelena-barva {
-        color: green;
+      .styled-text {
         font-weight: unset;
       }
     </style>
   </head>
   <body>
-    <h3 class="patkove">Patkové písmo</h3>
-    <h3 class="podtrzene">Podtržené</h3>
-    <h3 class="male-kapitalky">Malé kapitálky</h3>
-    <h3 class="tucne">Tučné</h3>
-    <h3 class="velikost40">Velikost 40 bodů</h3>
-    <h3 class="zarovnani-doprava">Zarovnání doprava</h3>
-    <h3 class="zelena-barva">Zelená barva</h3>
+    <button onclick="changeFont('Times New Roman', 'serif')">
+      Patkové písmo
+    </button>
+    <button onclick="toggleUnderline()">Podtržení</button>
+    <button onclick="toggleSmallCaps()">Malé kapitálky</button>
+    <button onclick="toggleBold()">Tučné</button>
+    <button onclick="changeFontSize(40)">Velikost 40 bodů</button>
+    <button onclick="alignRight()">Zarovnání doprava</button>
+    <button onclick="changeColor('green')">Zelená barva</button>
+    <button onclick="setBackground('blue', '')">Modré pozadí</button>
+    <button
+      onclick="setBackground('', 'https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif')"
+    >
+      GIF pozadí
+    </button>
+    <button
+      onclick="setBackground('', 'https://www.purkynka.cz/wp-content/uploads/2022/04/Purkynka-HOR_barva.png')"
+    >
+      Obrázkové pozadí
+    </button>
+
+    <h3 id="text" class="styled-text">Ukázkový text</h3>
+
+    <script>
+      function changeFont(font, type) {
+        document.getElementById("text").style.fontFamily = `${font}, ${type}`;
+      }
+
+      function toggleUnderline() {
+        let text = document.getElementById("text");
+        text.style.textDecoration =
+          text.style.textDecoration === "underline" ? "none" : "underline";
+      }
+
+      function toggleSmallCaps() {
+        let text = document.getElementById("text");
+        text.style.fontVariant =
+          text.style.fontVariant === "small-caps" ? "normal" : "small-caps";
+      }
+
+      function toggleBold() {
+        let text = document.getElementById("text");
+        text.style.fontWeight =
+          text.style.fontWeight === "bold" ? "normal" : "bold";
+      }
+
+      function changeFontSize(size) {
+        document.getElementById("text").style.fontSize = size + "px";
+      }
+
+      function alignRight() {
+        document.getElementById("text").style.textAlign = "right";
+      }
+
+      function changeColor(color) {
+        document.getElementById("text").style.color = color;
+      }
+
+      function setBackground(color, image) {
+        document.body.style.backgroundColor = color;
+        document.body.style.backgroundImage = image
+          ? `url('${image}')`
+          : "none";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+      }
+    </script>
   </body>
 </html>
