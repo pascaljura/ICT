@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrázky s různou opacitou</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: url("https://www.transparenttextures.com/patterns/black-linen.png"),
+          rgba(0, 0, 255, 0.485);
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+      }
+      .list-container {
+        padding: 20px;
+        color: white;
+        flex-shrink: 0;
+      }
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+      .image-container img {
+        width: 100px;
+        height: auto;
+        display: block;
+      }
+      .image1 img {
+        opacity: 0.3;
+      }
+      .image2 img {
+        opacity: 0.5;
+      }
+      .image3 img {
+        opacity: 0.7;
+      }
+      .div1 {
+        padding: 5px;
+        opacity: 0.3;
+        background: blue;
+      }
+      .div2 {
+        padding: 5px;
+        opacity: 0.5;
+        background: blue;
+      }
+      .div3 {
+        padding: 5px;
+        opacity: 0.7;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="list-container">
+        <div class="div1">První položka</div>
+        <div class="div2">Druhá položka</div>
+        <div class="div3">Třetí položka</div>
+      </div>
+      <div class="image-container">
+        <div class="image1">
+          <img
+            src="https://static.posters.cz/image/1300/poster/pokemon-pikachu-neon-i71936.jpg"
+            alt="Obrázek 1"
+          />
+        </div>
+        <div class="image2">
+          <img
+            src="https://static.posters.cz/image/1300/poster/pokemon-pikachu-neon-i71936.jpg"
+            alt="Obrázek 2"
+          />
+        </div>
+        <div class="image3">
+          <img
+            src="https://static.posters.cz/image/1300/poster/pokemon-pikachu-neon-i71936.jpg"
+            alt="Obrázek 3"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
