@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webová stránka</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .background-color {
+            background-color: lightblue;
+            padding: 50px;
+        }
+
+        .background-image {
+            background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsamples-files.com%2Fsamples%2Fimages%2Fjpg%2F1920-1080-sample.jpg&f=1&nofb=1&ipt=22f4974a35284f2a0494eb5ebdfae9fbc1869416c2c99bcce1c5056130dc9582&ipo=images') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .transparent-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+        }
+
+        .more-transparent {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    
+    <div class="background-color">
+        <p>Toto je barevné pozadí.</p>
+    </div>
+
+    <div class="background-image">
+        <div class="transparent-box">
+            <p>Toto je průhledný box s průhledností 0.6.</p>
+        </div>
+    </div>
+
+    <div class="background-image">
+        <div class="transparent-box more-transparent">
+            <p>Toto je průhledný box s průhledností 0.2.</p>
+        </div>
+    </div>
+</body>
+</html>
