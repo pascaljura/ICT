@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje oblíbená divadla</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main";
+            grid-template-rows: auto auto 1fr;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 48px;
+            grid-area: header;
+            font-weight: bold;
+            margin-top: -1px;
+        }
+
+        nav {
+            background: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            grid-area: nav;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            grid-area: main;
+        }
+
+        .column {
+            flex: 1;
+            margin: 10px;
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .column img {
+            width: 100%;
+            border: 3px solid #333;
+            margin-top: 2px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                padding-top: 10px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr 1fr 1fr;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Moje oblíbená divadla</header>
+        <nav>
+            <a href="#divadlo1">Národní divadlo Brno</a>
+            <a href="#divadlo2">Divadlo Husa na provázku</a>
+            <a href="#divadlo3">Divadlo Bolka Polívky</a>
+        </nav>
+        <div class="content">
+            <div class="column" id="divadlo1">
+                <h2>Národní divadlo Brno</h2>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Foperaplus.cz%2Fwp-content%2Fuploads%2F2021%2F04%2F169523271_3784230234988052_4952303133997901141_n.jpg&f=1&nofb=1&ipt=94e55465280e531caa541512546b3b3336c45b06efe1365f60e203ab5b84041e&ipo=images"
+                    alt="Národní divadlo Brno">
+                <br>
+                <br>
+                <p>Vybraná hra: Její pastorkyňa – Gabriela Preissová</p>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.pmgstatic.com%2Fcache%2Fresized%2Fw936%2Ffiles%2Fimages%2Ffilm%2Fphotos%2F158%2F213%2F158213767_84e0b9.jpg&f=1&nofb=1&ipt=930c14527e3260ea0e2e446b4bde67c9e72242acbd1d26d62864be15586af221&ipo=images"
+                    alt="Scéna z Její pastorkyně">
+            </div>
+            <div class="column" id="divadlo2">
+                <h2>Divadlo Husa na provázku</h2>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.i-divadlo.cz%2Fimages%2Ffotky_div%2Fvelke%2FIMG_140327243a.jpg&f=1&nofb=1&ipt=7f5135d9332f52c7d5b44e6b241fa8e683537cd5cb0a7e65657cbcd69afdeb33&ipo=images"
+                    alt="Divadlo Husa na provázku">
+                <br>
+                <br>
+                <p>Vybraná hra: Audience – Václav Havel</p>
+                <iframe src="https://youtu.be/xpWYEHMMEEE?si=g8pJFW3tZ3etjA2S"></iframe>
+            </div>
+            <div class="column" id="divadlo3">
+                <h2>Divadlo Bolka Polívky</h2>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd15-a.sdn.cz%2Fd_15%2Fc_img_E_E%2FVKjQgI.jpeg%3Ffl%3Dcro%2C0%2C15%2C800%2C450%257Cres%2C1200%2C%2C1%257Cjpg%2C80%2C%2C1&f=1&nofb=1&ipt=238e0d60bd5e9a0196d5a8ebd060ad5e9f259775ad3185fc7498ce8f3132b861&ipo=images"
+                    alt="Divadlo Bolka Polívky">
+                <br>
+                <br>
+                <p>Vybraná hra: Šašek a syn – Bolek Polívka</p>
+                <img src="https://static.goout.cloud/divadlobolkapolivkycz/2018/03/1719987d-0-1024x683.jpg"
+                    alt="Šašek a syn">
+            </div>
+        </div>
+    </div>
+    <footer>Webmaster: František Vaněk</footer>
+</body>
+
+</html>
