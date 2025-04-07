@@ -101,7 +101,6 @@ nav a:hover {
 }
 .theatre {
   flex: 1 1 250px;
-  max-width: 300px;
   background-color: #fff;
   padding: 1em;
   border-radius: 10px;
@@ -110,8 +109,8 @@ nav a:hover {
   border-top: 4px solid #5088b5;
 }
 .theatre img {
-  max-width: 100%;
-  border-radius: 6px;
+  max-width: 50%;
+  border-radius: 20px;
   height: auto;
   margin-bottom: 1em;
 }
