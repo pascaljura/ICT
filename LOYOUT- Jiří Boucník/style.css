@@ -1,0 +1,177 @@
+/* Základní styl */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header a logo */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5088b5;
+  color: white;
+  padding: 1em;
+  position: relative;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Klasická navigace (viditelná na PC, skrytá na mobilu) */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2em;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger ikona (skrytá na PC, viditelná na mobilu) */
+.hamburger {
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobilní menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #5088b5;
+  padding: 2em 1em;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+.mobile-menu.open {
+  right: 0;
+}
+.mobile-menu .close {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+.mobile-menu ul {
+  list-style: none;
+  padding: 2em 0;
+}
+.mobile-menu li {
+  margin-bottom: 1.5em;
+}
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* Divadla */
+.theatres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  gap: 2em;
+}
+.theatre {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-top: 4px solid #5088b5;
+}
+.theatre img {
+  max-width: 100%;
+  border-radius: 6px;
+  height: auto;
+  margin-bottom: 1em;
+}
+.theatre p {
+  font-size: 0.95em;
+}
+
+/* Footer */
+footer {
+  background-color: #5088b5;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+footer a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* Desktop menu */
+.desktop-menu {
+  display: flex;
+}
+.desktop-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2em;
+}
+.desktop-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.desktop-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Skrytí desktop menu na mobilu */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .desktop-menu ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .theatres {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brněnská divadla</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Divadla Brno</div>
+
+      <!-- Desktop menu -->
+      <nav class="desktop-menu">
+        <ul>
+          <li>
+            <a href="https://www.ndbrno.cz/" target="_blank"
+              >Národní divadlo Brno</a
+            >
+          </li>
+          <li>
+            <a href="https://www.mdb.cz/" target="_blank"
+              >Městské divadlo Brno</a
+            >
+          </li>
+          <li>
+            <a href="https://www.divadlonaorli.cz/" target="_blank"
+              >Divadlo na Orlí</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger ikona -->
+      <button class="hamburger" id="hamburger">&#9776;</button>
+
+      <!-- Mobile menu -->
+      <nav class="mobile-menu" id="mobileMenu">
+        <button class="close" id="closeBtn">&times;</button>
+        <br /><br /><br />
+        <a href="https://www.ndbrno.cz/" target="_blank"
+          >Národní divadlo Brno</a
+        >
+        <br />
+        <a href="https://www.mdb.cz/" target="_blank">Městské divadlo Brno</a>
+        <br />
+        <a href="https://www.divadlonaorli.cz/" target="_blank"
+          >Divadlo na Orlí</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section class="theatres">
+        <div class="theatre">
+          <a href="https://www.ndbrno.cz/" target="_blank">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMtzVfTwDB1sHDOwK1aze1a4yNMvIX0xjw6A&s"
+              alt="Národní divadlo Brno"
+            />
+          </a>
+          <p>Tradiční scéna Brna s činohrou, operou i baletem.</p>
+        </div>
+        <div class="theatre">
+          <a href="https://www.mdb.cz/" target="_blank">
+            <img
+              src="https://www.theatre-architecture.eu/res/archive/074/008574.jpg?seek=1274018034"
+              alt="Městské divadlo Brno"
+            />
+          </a>
+          <p>Moderní hudební divadlo se silným hereckým ansámblem.</p>
+        </div>
+        <div class="theatre">
+          <a href="https://www.divadlonaorli.cz/" target="_blank">
+            <img
+              src="https://d48-a.sdn.cz/d_48/c_img_E_C/MKWGML.jpeg"
+              alt="Divadlo na Orlí"
+            />
+          </a>
+          <p>Studentská scéna JAMU se zaměřením na experimentální tvorbu.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 <a href="https://alba-rosa.cz" target="_blank">alba-rosa.cz</a>
+      </p>
+    </footer>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeBtn = document.getElementById("closeBtn");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.add("open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>
