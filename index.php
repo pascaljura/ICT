@@ -140,16 +140,16 @@ if ($relativePath !== '') {
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: gray;
+            max-width: 800px;
             margin: 50px auto;
+            padding: 20px;
             background-color: var(--bs-body-bg);
+            border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            border-radius: 10px;
+            text-align: center;
+            font-size: 0.9em;
+            color: gray;
         }
     </style>
 </head>
