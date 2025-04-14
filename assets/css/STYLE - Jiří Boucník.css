@@ -64,6 +64,7 @@ nav a:hover {
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out;
   z-index: 1000;
+  text-align: center;
 }
 .mobile-menu.open {
   right: 0;
@@ -74,8 +75,8 @@ nav a:hover {
   border: none;
   color: white;
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 10px;
+  right: 115px;
   cursor: pointer;
 }
 .mobile-menu ul {
@@ -117,7 +118,10 @@ nav a:hover {
 .theatre p {
   font-size: 0.95em;
 }
-
+iframe {
+  width: max-content;
+  height: auto;
+}
 /* Footer */
 footer {
   background-color: #5088b5;
