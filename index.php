@@ -223,10 +223,10 @@ if ($relativePath !== '') {
                 <?php endforeach; ?>
             </ul>
         </div>
+        <footer>
+            Vytvořil Jiří Boucník | <a href="https://alba-rosa.cz" target="_blank">alba-rosa.cz</a>
+        </footer>
     </div>
-    <footer>
-        Vytvořil Jiří Boucník | <a href="https://alba-rosa.cz" target="_blank">alba-rosa.cz</a>
-    </footer>
     <script src="assets/js/circlePlayground.js"></script>
     <script>
         const toggleButton = document.getElementById('toggleTheme');
