@@ -108,11 +108,6 @@ if ($relativePath !== '') {
             font-weight: bold;
         }
 
-        .file-list ul.list-group {
-            max-height: 600px;
-            overflow-y: auto;
-        }
-
         .dark-mode-toggle {
             position: -webkit-sticky;
             position: sticky;
