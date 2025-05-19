@@ -170,6 +170,48 @@
             text-align: left;
         }
 
+        .zoom-wrapper {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+
+        .zoom-wrapper.zoomed {
+            transform: scale(2);
+            z-index: 1002;
+            cursor: zoom-out;
+        }
+
+        .highlight-css code {
+            display: block;
+            background-color: #F0F2F2;
+            color: #3C3C3B;
+            border: 2px solid #5088B5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-width: 90%;
+            margin: 1rem auto;
+            text-align: left;
+        }
+
+        .highlight-css code span.selector {
+            color: #0074D9;
+            font-weight: bold;
+        }
+
+        .highlight-css code span.property {
+            color: #2E8B57;
+        }
+
+        .highlight-css code span.value {
+            color: #B22222;
+        }
+
         @media (max-width: 768px) {
             .slide img {
                 width: 95%;
@@ -195,19 +237,25 @@
             <div class="slide-number">01</div>
             <h1>Co je responzivní design?</h1>
             <p>Design, který se přizpůsobuje různým zařízením – mobilům, tabletům, počítačům.</p>
-            <img src="./assets/img/grid.webp" alt="Responzivní design">
+            <div class="zoom-wrapper" onclick="this.classList.toggle('zoomed')">
+                <img src="./assets/img/grid.webp" alt="Responzivní design">
+            </div>
         </div>
         <div class="slide">
             <div class="slide-number">02</div>
             <h1>Proč je důležitý?</h1>
             <p>Zajišťuje přístupnost, lepší uživatelský zážitek a vyšší návštěvnost.</p>
-            <img src="./assets/img/02.jpg" alt="Mobilní vs PC">
+            <div class="zoom-wrapper" onclick="this.classList.toggle('zoomed')">
+                <img src="./assets/img/02.jpg" alt="Mobilní vs PC">
+            </div>
         </div>
         <div class="slide">
             <div class="slide-number">03</div>
             <h1>Jak ho poznám?</h1>
             <p>Stránka se správně zobrazuje na mobilu i počítači, prvky nejsou mimo obrazovku.</p>
-            <img src="./assets/img/03.jpg"" alt=" Příklad rozvržení">
+            <div class="zoom-wrapper" onclick="this.classList.toggle('zoomed')">
+                <img src="./assets/img/03.jpg"" alt=" Příklad rozvržení">
+            </div>
         </div>
         <div class="slide">
             <div class="slide-number">04</div>
@@ -251,7 +299,9 @@
 
             </ol>
             </p>
-            <img src="./assets/img/03.jpg"" alt=" Příklad rozvržení">
+            <div class="zoom-wrapper" onclick="this.classList.toggle('zoomed')">
+                <img src="./assets/img/03.jpg" alt=" Příklad rozvržení">
+            </div>
         </div>
         <div class="slide">
             <div class="slide-number">05.1</div>
@@ -295,10 +345,23 @@
                 </ul>
 
                 <h3>Media Queries</h3>
-                <pre><code>/* If the screen size is 600px wide or less, hide the element */
+                <pre class="highlight-css"><code>/* If the screen size is 600px wide or less, hide the element */
 @media only screen and (max-width: 600px) {
   div.example {
     display: none;
+  }
+} 
+<div> /* If the screen size is 601px or more, set the font-size of to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+<div>/* If the screen size is 600px or less, set the font-size of  to 30px */
+@media only screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
   }
 }</code></pre>
                 <h3 style="margin-bottom: 5px;">Na PC</h3>
